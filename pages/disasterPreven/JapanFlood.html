@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" />
+    <link rel="stylesheet" href="../../layui/css/mind.css" />
+    <link rel="stylesheet" href="https://js.arcgis.com/4.6/esri/css/main.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.6/dijit/themes/claro/claro.css">
+<style type="text/css">
+html, iframe {width: 100%; height: 100%;}
+</style>
+</head>
+
+<body class="childrenBody">
+<div>
+<iframe src="https://yamauchi-inochu.github.io/arcgis_api/index.html" id="iframe" scrolling="no" onload="changeFrameHeight()" frameborder="0"></iframe>
+</div>
+
+<script type="text/javascript">
+window.onload = function() {
+    var iframe = document.getElementById("iframe");
+    iframe.style.width = window.innerWidth + 'px';
+    iframe.style.height = window.innerHeight + 'px';
+};
+</script>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+</body>
+</html>
