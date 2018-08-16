@@ -11,7 +11,7 @@ layui.use(['form','layer','laydate','table','laytpl'],function(){
         var index = layui.layer.open({
             title : "日本の例",
             type : 2,
-            content : "https://yamauchi-inochu.github.io/arcgis_api/index.html",
+            content : "https://scarlett0507.github.io/0817map/index.html",
             success : function(layero, index){
                 var body = layui.layer.getChildFrame('body', index);
                 setTimeout(function(){
