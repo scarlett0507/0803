@@ -30,6 +30,7 @@ li{
 p {
     width: 90%;
     height: 25%;
+    text-align:left;
    font-family: Georgia, "游明朝", "Yu Mincho", "游明朝体", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho ProN", "MS P明朝", "MS PMincho", HGS明朝E, "MS Mincho", serif;
     color: #393e4f;
     margin-right: 10px;
@@ -43,6 +44,17 @@ v {
     height: 25%;
    font-family: Georgia, "游明朝", "Yu Mincho", "游明朝体", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho ProN", "MS P明朝", "MS PMincho", HGS明朝E, "MS Mincho", serif;
     color: #393e4f;
+    margin-right: 10px;
+    letter-spacing: 3px;
+    line-height: 150%;
+    margin: 0 auto;
+    font-size: 0.5em;
+}
+in {
+    width: 90%;
+    height: 25%;
+   font-family: Georgia, "游明朝", "Yu Mincho", "游明朝体", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho ProN", "MS P明朝", "MS PMincho", HGS明朝E, "MS Mincho", serif;
+    color: #FFFFFF;
     margin-right: 10px;
     letter-spacing: 3px;
     line-height: 150%;
