@@ -45,7 +45,7 @@ div#title {
    font-family: Georgia, "游明朝", "Yu Mincho", "游明朝体", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho ProN", "MS P明朝", "MS PMincho", HGS明朝E, "MS Mincho", serif;
     color: #000000;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.0em;
 }
 .content {
     color: #000000;
@@ -62,7 +62,7 @@ p {
     letter-spacing: 3px;
     line-height: 150%;
     margin: 0 auto;
-    font-size: 0.95em;
+    font-size: 0.75em;
 }
 div.container {
    height: 50%;
