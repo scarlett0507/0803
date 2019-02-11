@@ -76,19 +76,19 @@ require([
         visible: false
     });
       const shelter = new KMLLayer({
-      url:"https://scarlett0507.github.io/Matsusaka/SheltersNew.kmz",
+      url:"https://scarlett0507.github.io/Matsusaka/TsunamiShelter.kmz",
       id:"shelter",
       copyright:"国土数値情報（避難施設データ）を加工し作成",
       visible: false
     });
     const flood = new KMLLayer({
-    url:"https://scarlett0507.github.io/Matsusaka/Tsunami.kmz",
+    url:"https://scarlett0507.github.io/Matsusaka/TsunamiWater.kmz",
     id:"flood",
     copyright:"国土数値情報（津波浸水想定データ）を加工し作成",
     opacity:0.8
   });
     const did = new KMLLayer({
-    url:"https://scarlett0507.github.io/Matsusaka/DID.kmz",
+    url:"https://scarlett0507.github.io/Matsusaka/line.kmz",
     id:"did",
     copyright:"国土数値情報（人口集中地区データ）を加工し作成",
     visible: false,
@@ -181,6 +181,8 @@ require([
       </div>
       <div id="title"><br>レイヤ</div>
       <div class="content">
+       <p><input type="checkbox" id="line"/>　津波避難目標ライン<br>
+	<img src="../../img/Line.png"><br>
        <p><input type="checkbox" id="shelter"/> 一次避難所<br>
         <img src="../../img/ShelterL.png"><br>
         <p><input type="checkbox" id="flood" checked/> 想定浸水区域<br>
