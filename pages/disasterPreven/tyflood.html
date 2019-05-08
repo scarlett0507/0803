@@ -90,6 +90,11 @@ require([
     id:"flood",
     copyright:"国土数値情報（浸水想定区域）を加工し作成"
   });
+     const qy = new KMLLayer({
+    url:"https://scarlett0507.github.io/Toin/qy.kmz",
+    id:"qy",
+    visible: false
+  });
     const b300 = new KMLLayer({
     url:"https://scarlett0507.github.io/Toin/Buffer_300.kmz",
     id:"b300",
@@ -100,23 +105,18 @@ require([
         id:"b500",
         visible: false
       });
-    const b800 = new KMLLayer({
-        url:"https://scarlett0507.github.io/Toin/Buffer_800.kmz",
-        id:"b800",
-        visible: false
-      });  
     const b1k = new KMLLayer({
     	    url:"https://scarlett0507.github.io/Toin/Buffer_1km.kmz",
     	    id:"b1k"
     	  });
-    const b2k = new KMLLayer({
-        url:"https://scarlett0507.github.io/Toin/Buffer_2km.kmz",
-        id:"b2k",
+    const landslide = new KMLLayer({
+        url:"https://scarlett0507.github.io/Toin/landslide.kmz",
+        id:"landslide",
         visible: false
       });
     const map = new Map({
       basemap: "topo",
-      layers: [gsipaleLyr2,gsipaleLyr3,gsipaleLyr4,gsipaleLyr,area,flood,shelter,b300,b500,b800,b1k,b2k]
+      layers: [gsipaleLyr2,gsipaleLyr3,gsipaleLyr4,gsipaleLyr,area,flood,shelter,qy,b300,b500,b1k,landslide]
     });
     const view = new MapView({
       container: "viewDiv",
@@ -155,19 +155,19 @@ require([
         if (event.layer.id === "flood"){
          console.log("floodの LayerView が作成されました!", event.layerView);
        }
+	if (event.layer.id === "qy"){
+        console.log("didの LayerView が作成されました!", event.layerView);
+      }
        if (event.layer.id === "b300"){
         console.log("didの LayerView が作成されました!", event.layerView);
       }
        if (event.layer.id === "b500"){
            console.log("didの LayerView が作成されました!", event.layerView);
          }
-       if (event.layer.id === "b800"){
-           console.log("didの LayerView が作成されました!", event.layerView);
-         }
        if (event.layer.id === "b1k"){
            console.log("didの LayerView が作成されました!", event.layerView);
          }
-       if (event.layer.id === "b2k"){
+       if (event.layer.id === "landslide"){
            console.log("didの LayerView が作成されました!", event.layerView);
          }
       });
@@ -177,11 +177,11 @@ require([
   const gsipaleToggle4 = document.getElementById("gsipaleLyr4");
   const shelterToggle = document.getElementById("shelter");
   const floodToggle = document.getElementById("flood");
+  const qyToggle = document.getElementById("qy");
   const b300Toggle = document.getElementById("b300");
   const b500Toggle = document.getElementById("b500");
-  const b800Toggle = document.getElementById("b800");
   const b1kToggle = document.getElementById("b1k");
-  const b2kToggle = document.getElementById("b2k");
+  const landslideToggle = document.getElementById("landslide");
     on(gsipaleToggle, "change", function() {
           gsipaleLyr.visible = gsipaleToggle.checked;
       });
@@ -200,20 +200,20 @@ require([
     on(floodToggle, "change", function() {
       flood.visible = floodToggle.checked;
     });
+    on(qyToggle, "change", function() {
+      qy.visible = qyToggle.checked;
+    });
     on(b300Toggle, "change", function() {
       b300.visible = b300Toggle.checked;
     });
     on(b500Toggle, "change", function() {
         b500.visible = b500Toggle.checked;
       });
-    on(b800Toggle, "change", function() {
-        b800.visible = b800Toggle.checked;
-      });
     on(b1kToggle, "change", function() {
         b1k.visible = b1kToggle.checked;
       });
-    on(b2kToggle, "change", function() {
-        b2k.visible = b2kToggle.checked;
+    on(landslideToggle, "change", function() {
+        landslide.visible = landslideToggle.checked;
       });
   });
 </script>
@@ -235,12 +235,11 @@ require([
         <p><input type="checkbox" id="shelter"/> 一次避難所<br>
         <p><input type="checkbox" id="b300" /> 300メートル<br>
         <p><input type="checkbox" id="b500" /> 500メートル<br>
-        <p><input type="checkbox" id="b800" /> 800メートル<br>
         <p><input type="checkbox" id="b1k" checked /> 1キロ<br>
-        <p><input type="checkbox" id="b2k" /> ２キロ<br>
+        <p><input type="checkbox" id="landslide" /> 土砂災害危険箇所<br>
         <p><input type="checkbox" id="flood" checked /> 想定浸水区域<br>
-        <div style="width:100px; height:90px; margin:0 auto;">
-	    <img src="../../img/ty.png"><br></div>
+        <div style="width:200px; height:180px; margin:0 auto;">
+	    <img src="../../img/ty.jpg"><br></div>
 	    <p style="text-align: center; font-size:10px;"><a href="https://github.com/yamauchi-inochu/arcgis_api">この地図について</a></p>
       </div>
      </div>
