@@ -109,7 +109,7 @@ require([
     	    id:"b1k"
     	  });
     const b2k = new KMLLayer({
-        url:"https://scarlett0507.github.io/Toin/Buffer_2km.kmz",
+        url:"https://scarlett0507.github.io/Toin/landslide.kmz",
         id:"b2k",
         visible: false
       });
@@ -178,7 +178,6 @@ require([
   const floodToggle = document.getElementById("flood");
   const b300Toggle = document.getElementById("b300");
   const b500Toggle = document.getElementById("b500");
-  const qyToggle = document.getElementById("qy");
   const b1kToggle = document.getElementById("b1k");
   const b2kToggle = document.getElementById("b2k");
     on(gsipaleToggle, "change", function() {
@@ -204,9 +203,6 @@ require([
     });
     on(b500Toggle, "change", function() {
         b500.visible = b500Toggle.checked;
-      });
-    on(qyToggle, "change", function() {
-        qy.visible = qyToggle.checked;
       });
     on(b1kToggle, "change", function() {
         b1k.visible = b1kToggle.checked;
@@ -234,7 +230,6 @@ require([
         <p><input type="checkbox" id="shelter"/> 一次避難所<br>
         <p><input type="checkbox" id="b300" /> 300メートル<br>
         <p><input type="checkbox" id="b500" /> 500メートル<br>
-        <p><input type="checkbox" id="qy" /> 800メートル<br>
         <p><input type="checkbox" id="b1k" checked /> 1キロ<br>
         <p><input type="checkbox" id="b2k" /> 土砂災害危険箇所<br>
         <p><input type="checkbox" id="flood" checked /> 想定浸水区域<br>
