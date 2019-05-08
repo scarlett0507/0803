@@ -90,10 +90,6 @@ require([
     id:"flood",
     copyright:"国土数値情報（浸水想定区域）を加工し作成"
   });
-     const qy = new KMLLayer({
-    url:"https://scarlett0507.github.io/Toin/qy.kmz",
-    id:"qy"
-  });
     const b300 = new KMLLayer({
     url:"https://scarlett0507.github.io/Toin/Buffer_300.kmz",
     id:"b300",
@@ -154,9 +150,6 @@ require([
         if (event.layer.id === "flood"){
          console.log("floodの LayerView が作成されました!", event.layerView);
        }
-	if (event.layer.id === "qy"){
-        console.log("didの LayerView が作成されました!", event.layerView);
-      }
        if (event.layer.id === "b300"){
         console.log("didの LayerView が作成されました!", event.layerView);
       }
@@ -176,7 +169,6 @@ require([
   const gsipaleToggle4 = document.getElementById("gsipaleLyr4");
   const shelterToggle = document.getElementById("shelter");
   const floodToggle = document.getElementById("flood");
-  const qyToggle = document.getElementById("qy");
   const b300Toggle = document.getElementById("b300");
   const b500Toggle = document.getElementById("b500");
   const b1kToggle = document.getElementById("b1k");
@@ -198,9 +190,6 @@ require([
     });
     on(floodToggle, "change", function() {
       flood.visible = floodToggle.checked;
-    });
-    on(qyToggle, "change", function() {
-      qy.visible = qyToggle.checked;
     });
     on(b300Toggle, "change", function() {
       b300.visible = b300Toggle.checked;
