@@ -75,6 +75,10 @@ require([
         copyright:"地理院タイル（第一期　国土画像情報）",
         visible: false
     });
+      const qy = new KMLLayer({
+      url:"https://scarlett0507.github.io/Toin/qy.kmz",
+      id:"qy"
+      });  
       const area = new KMLLayer({
       url:"https://scarlett0507.github.io/Toin/TY.kmz",
       id:"area"
@@ -100,10 +104,7 @@ require([
         id:"b500",
         visible: false
       });
-    const qy = new KMLLayer({
-        url:"https://scarlett0507.github.io/Toin/qy.kmz",
-        id:"qy"
-      });  
+
     const b1k = new KMLLayer({
     	    url:"https://scarlett0507.github.io/Toin/Buffer_1km.kmz",
     	    id:"b1k"
