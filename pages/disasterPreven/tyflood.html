@@ -116,7 +116,7 @@ require([
       });
     const map = new Map({
       basemap: "topo",
-      layers: [gsipaleLyr2,gsipaleLyr3,gsipaleLyr4,gsipaleLyr,area,flood,shelter,b300,b500,qy,b1k,b2k]
+      layers: [gsipaleLyr2,gsipaleLyr3,gsipaleLyr4,gsipaleLyr,qy,area,flood,shelter,b300,b500,b1k,b2k]
     });
     const view = new MapView({
       container: "viewDiv",
@@ -146,6 +146,9 @@ require([
         if (event.layer.id === "gsipale4") {
           console.log("地理院タイル（第一期国土画像情報）の LayerView が作成されました!", event.layerView);
         }
+	if (event.layer.id === "qy"){
+           console.log("didの LayerView が作成されました!", event.layerView);
+         }
         if (event.layer.id === "area"){
           console.log("Areaの LayerView が作成されました!", event.layerView);
         }
@@ -161,9 +164,7 @@ require([
        if (event.layer.id === "b500"){
            console.log("didの LayerView が作成されました!", event.layerView);
          }
-       if (event.layer.id === "qy"){
-           console.log("didの LayerView が作成されました!", event.layerView);
-         }
+
        if (event.layer.id === "b1k"){
            console.log("didの LayerView が作成されました!", event.layerView);
          }
