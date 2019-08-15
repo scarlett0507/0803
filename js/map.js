@@ -11,7 +11,7 @@ layui.use(['form','layer','laydate','table','laytpl'],function(){
         var index = layui.layer.open({
             title : "日本の例",
             type : 2,
-            content : "../disasterPreven/tyflood.html",
+            content : "../disasterPreven/guiflood.html",
             success : function(layero, index){
                 var body = layui.layer.getChildFrame('body', index);
                 setTimeout(function(){
